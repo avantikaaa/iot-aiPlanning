@@ -16,7 +16,7 @@ def getProblemGoal(data) -> str:
     return res
 
 def getPredicates(data) -> str:
-    res = ''
+    res = []
     for obj in data['predicates']:
         if obj['extensible']:
             f = open(obj["type"] + ".device.json", "r")
@@ -24,7 +24,7 @@ def getPredicates(data) -> str:
             # print(d)
             for i in d["predicates"]:
                 # print(i)
-                res += "\t" + i + "\n"
+                res.append(i)
     return res
 
 def getActions(data) -> str:

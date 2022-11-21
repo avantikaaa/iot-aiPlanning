@@ -11,10 +11,36 @@ f.write(f'(define (domain {data["domain_name"]}) \n')
 # print(getPredicates(data))
 
 domain_predicates = getPredicates(data)
+init_state = constructInit(data)
+# print(init_state)
+init_state = init_state.split("\n")
+# print(init)
+init = []
+for i in init_state:
+    # i.strip('\t')
+    init.append(i[2:-1])
+# init = [i.strip("\t(")[:-1] for i in init]
+print(init)
+# exit()
+init.pop()
+pred = set()
+for i in domain_predicates:
+    pred.add(i.split()[0])
 
+for i in init:
+    # print(i)
+    if i.split()[0] not in pred:
+        i = i.split()
+        tmp = i[0].lower()
+        for j in range(len(i)-1):
+            tmp += " ?var" + str(j)
+        domain_predicates.append("(" + tmp + ")")
+
+        pred.add(tmp)
+# domain_predicates += init
 f.write(f'(:predicates ')
 for obj in domain_predicates:
-    f.write(f'{obj}')
+    f.write(f'\t{obj}\n')
 f.write(')\n')
 
 domain_actions = getActions(data)
