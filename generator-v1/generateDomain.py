@@ -20,23 +20,25 @@ for i in init_state:
     # i.strip('\t')
     init.append(i[2:-1])
 # init = [i.strip("\t(")[:-1] for i in init]
-print(init)
+# print(init)
 # exit()
 init.pop()
 pred = set()
 for i in domain_predicates:
-    pred.add(i.split()[0])
-
+    pred.add(i.split()[0][1:])
+# print(pred)
 for i in init:
     # print(i)
-    if i.split()[0] not in pred:
+    if i.split()[0].lower() not in pred:
         i = i.split()
         tmp = i[0].lower()
+        # print(tmp)
+        pred.add(tmp)
         for j in range(len(i)-1):
             tmp += " ?var" + str(j)
         domain_predicates.append("(" + tmp + ")")
+        # print(pred)
 
-        pred.add(tmp)
 # domain_predicates += init
 f.write(f'(:predicates ')
 for obj in domain_predicates:
