@@ -1,0 +1,7 @@
+Device Models
+- IPSO Model (http://www.ipso.org/specifications/ipso-model/)
+- IPSO client/server
+- Create a mini server running via HTTP that follows the IPSO Standard
+- https://www.eclipse.org/leshan/
+- https://techlibrary.hpe.com/docs/otlink-wo/IPSO-Object-Reference-Guide.html#example-of-a-temperature-sensor-object
+- 

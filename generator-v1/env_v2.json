@@ -1,0 +1,48 @@
+{
+  "problem_name": "strips-gripper",
+  "domain_name": "strips-gripper",
+  "domain": "path_to_domain",
+  "problem_objects": [
+    {
+      "name": "ROOM1",
+      "type": "ROOM"
+    },
+    {
+      "name": "ROOM1",
+      "type": "ROOM"
+    },
+    {
+      "name": "BALL1",
+      "type": "BALL"
+    },
+    {
+      "name": "BALL2",
+      "type": "BALL"
+    },
+    {
+      "name": "LEFT"
+    },
+    {
+      "name": "RIGHT"
+    }
+  ],
+  "init": [
+    "(ROOM ROOM1)",
+    "(ROOM ROOM2)",
+    "(BALL BALL1)",
+    "(BALL BALL2)",
+    "(GRIPPER LEFT)",
+    "(GRIPPER RIGHT)",
+    "(AT-ROBBY ROOM1)",
+    "(FREE LEFT)",
+    "(FREE RIGHT)",
+    "(AT BALL1 ROOM1)",
+    "(AT BALL2 ROOM1)"
+  ],
+  "goal": ["(AND (AT BALL1 ROOM2)", "(AT BALL2 ROOM2))"],
+  "predicates": [
+    { "type": "room", "param": "r", "extensible": false },
+    { "type": "ball", "param": "b", "extensible": true },
+    { "type": "gripper", "param": "g", "extensible": true }
+  ]
+}

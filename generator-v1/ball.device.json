@@ -1,0 +1,6 @@
+{
+  "type": "ball",
+  "IPSO_DEVICE_ID": 1235,
+  "predicates": ["(at ?b ?r)"],
+  "actions": []
+}

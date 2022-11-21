@@ -1,0 +1,10 @@
+gripper-left.json/ gripper-right.json
+
+{
+	'free' : 'false',
+	'holding' : 'ball1',
+
+}
+// Environmental dependency
+// assumes that the gripper knows which ball it is holding -> how to make that connection??? *****PROBLEM*****
+(holding left ball1)

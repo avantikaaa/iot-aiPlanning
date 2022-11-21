@@ -1,0 +1,4 @@
+a walk such that all edges must be visited
+then start putting constraints
+	an edge can be visited only once
+	a vertext can be visited only once
