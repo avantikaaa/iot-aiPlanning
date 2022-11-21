@@ -1,0 +1,10 @@
+(define (problem increase_temp)
+   (:domain thermostat)
+   (:objects goal_temp current)
+   (:init 
+		(=(?current 22))
+		(=(?goal_temp 25))
+   )
+   (:goal (=(?current ?goal_temp)))
+    (:metric minimize (dist-covered))
+)
