@@ -49,10 +49,10 @@ domain_actions = getActions(data)
 
 
 
-# f.write(f'(:action ')
+f.write(f'(:action ')
 for obj in domain_actions:
     f.write(f'{obj}')
-# f.write(')\n')
+f.write(')\n')
 
 # f.write('(:init ')
 # init_state = constructInit(data)
