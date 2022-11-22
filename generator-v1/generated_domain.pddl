@@ -7,7 +7,7 @@
 	(gripper ?var0)
 	(free ?var0)
 )
-(:action (:action pick
+(:action pick
 	:parameters (?obj ?room ?gripper)
 	:precondition (and  (ball ?obj) (room ?room) (gripper ?gripper) (at ?obj ?room) (at-robby ?room) (free ?gripper))
 	:effect (and (carry ?obj ?gripper) (not (at ?obj ?room)) (not (free ?gripper))))
@@ -19,5 +19,4 @@
 	:parameters (?obj  ?room ?gripper)
 	:precondition (and  (ball ?obj) (room ?room) (gripper ?gripper) (carry ?obj ?gripper) (at-robby ?room))
 	:effect (and (at ?obj ?room) (free ?gripper) (not (carry ?obj ?gripper))))
-)
 )

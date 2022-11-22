@@ -1,7 +1,7 @@
 import json
 from data_utils import getPredicates, getActions, constructInit
 
-with open('./env_v2.json') as f:
+with open('./env_v1.json') as f:
    data = json.load(f)
 
 f = open("./generated_domain.pddl", "w")
@@ -49,10 +49,10 @@ domain_actions = getActions(data)
 
 
 
-f.write(f'(:action ')
+# f.write(f'(:action ')
 for obj in domain_actions:
     f.write(f'{obj}')
-f.write(')\n')
+# f.write(')\n')
 
 # f.write('(:init ')
 # init_state = constructInit(data)
