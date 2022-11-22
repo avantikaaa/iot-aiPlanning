@@ -16,3 +16,7 @@ another variation:
 you cant move the computer without powering it off. once it shuts down, then you can move
 
 network: all systems have to be connected. like comp1 is connected to lan1. when you move it to room2 for safe, you have to connect it to lan2.
+
+submit a write up:
+ - exp with pddl and the planners
+ - more focus on the issues we faced: env file, domain files etc.
