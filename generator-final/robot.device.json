@@ -1,0 +1,6 @@
+{
+  "type": "gripper",
+  "IPSO_DEVICE_ID": 1234,
+  "predicates": ["(at ?obj ?room)", "(carry ?obj ?robby)", "(free ?robby)"],
+  "actions": ["markSafe", "pick", "move", "drop", "connect"]
+}
