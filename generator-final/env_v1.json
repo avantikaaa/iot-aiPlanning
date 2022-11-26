@@ -1,0 +1,46 @@
+{
+  "problem_name": "save-computer12",
+  "domain_name": "save-computer",
+  "domain": "path_to_domain",
+  "problem_objects": [
+    {
+      "name": "ROOM1",
+      "type": "ROOM"
+    },
+    {
+      "name": "ROOM2",
+      "type": "ROOM"
+    },
+    {
+      "name": "ROBBY",
+      "type": "ROBBY"
+    },
+    {
+      "name": "COMP1",
+      "type": "COMPUTER"
+    }
+  ],
+  "init": [
+    "(ROOM ROOM1)",
+    "(ROOM ROOM2)",
+    "(COMP COMP1)",
+    "(POWER COMP1)",
+    "(CONNECTED COMP1)",
+    "(ROBOT ROBBY)",
+    "(FREE ROBBY)",
+    "(AT COMP1 ROOM1)",
+    "(AT ROBBY ROOM2)",
+    "(ALARM ROOM1)"
+  ],
+  "goal": ["(SAFE COMP1)"],
+  "predicates": [
+    {
+      "type": "room",
+      "param": "room",
+      "extensible": false
+    },
+    { "type": "robot", "param": "robby", "extensible": true },
+    { "type": "comp", "param": "comp", "extensible": true },
+    { "type": "alarm", "param": "room", "extensible": false }
+  ]
+}

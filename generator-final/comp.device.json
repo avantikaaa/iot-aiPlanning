@@ -1,0 +1,6 @@
+{
+  "type": "comp",
+  "IPSO_DEVICE_ID": 1235,
+  "predicates": ["(power ?comp)", "(connected ?comp)", "(safe ?comp)"],
+  "actions": ["poweron", "poweroff"]
+}
